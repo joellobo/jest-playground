@@ -1,5 +1,3 @@
-//importa os módulos e aqruivos necessários
-const request = require('supertest');
 const sayTDD = require('../src/hello');
 
 //o que será executado antes de todos os testes
@@ -9,8 +7,6 @@ beforeAll(async () => {
 
 //o que será executado após todos os testes
 afterAll(() => {
-    //o server close irá encerrar nossa aplicação, evitando problemas da porta já estar em uso
-    server.close();
     console.log('servidor fechado');
 });
 
