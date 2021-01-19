@@ -1,0 +1,47 @@
+git clone https://github.com/joellobo/jest-playground.git
+
+# 1
+mkdir new-test
+cd new-test
+
+yarn --init
+yarn add --dev jest
+
+jest --init
+mkdir src
+cd src
+touch sum.js
+
+--
+function sum(a, b) {
+    return a + b;
+}
+module.exports = sum;
+--
+
+cd ..
+
+mkdir "__tests__"
+cd "__tests__" 
+touch sum.test.js
+
+--
+const sum = require('../src/sum');
+
+test('adds 1 + 2 to equal 3', () => {
+  expect(sum(1, 2)).toBe(3);
+});
+--
+
+cd ..
+
+vim package.json
+
+  "scripts": {
+    "test": "jest"
+  },
+
+yarn test
+
+rm -R new-test/
+
