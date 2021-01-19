@@ -1,4 +1,4 @@
-const sayTDD = require('../src/hello');
+const hello = require('../src/hello');
 
 //o que será executado antes de todos os testes
 beforeAll(async () => {
@@ -14,6 +14,6 @@ describe('inicio dos testes', () => {
    //aqui não iremos testar uma rota e sim o retorno de uma função.
    test('irá verificar o retorno da função saytdd', () => {
       //é esperado que o retorno da função saytdd seja:
-      expect(sayTDD()).toMatch('TDD é o Desenvolvimento Orientado por Testes');
+      expect(hello()).toMatch('Hello!');
    });
 });
