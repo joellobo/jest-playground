@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest --watchAll",
+    "test": "jest",
+    "testw": "jest --watchAll",
     "dev": " nodemon app.js "
   },
   "author": "",
